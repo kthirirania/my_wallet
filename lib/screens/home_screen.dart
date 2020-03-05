@@ -85,7 +85,6 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
-                            fontFamily: 'Playfair',
                             fontWeight: FontWeight.w800,
                             shadows: <Shadow>[
                               Shadow(
@@ -220,7 +219,6 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 12,
-                          fontFamily: 'Playfair',
                           fontWeight: FontWeight.w400,
                         ),
                       ),
@@ -259,7 +257,6 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
-                          fontFamily: 'Playfair',
                           fontWeight: FontWeight.w500,
                           shadows: <Shadow>[
                             Shadow(

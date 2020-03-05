@@ -25,17 +25,3 @@ flutter:
 
   assets:
     - assets/icons/
-
-  fonts:
-    - family: Playfair
-      fonts:
-        - asset: assets/fonts/playfair/Regular.ttf
-          weight: 400
-        - asset: assets/fonts/playfair/Medium.ttf
-          weight: 500
-        - asset: assets/fonts/playfair/SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/playfair/Bold.ttf
-          weight: 700
-        - asset: assets/fonts/playfair/Black.ttf
-          weight: 800
