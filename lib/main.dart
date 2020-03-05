@@ -4,11 +4,11 @@ import 'package:my_wallet/widgets/bottom_navigation_widget.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'My Wallet',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
