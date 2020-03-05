@@ -2,6 +2,7 @@ import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:flutter/material.dart';
 import 'package:my_wallet/screens/home_screen.dart';
+import 'package:my_wallet/screens/other_screen.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
   @override
@@ -63,10 +64,10 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
         return HomeScreen();
         break;
       case 1:
-        return HomeScreen();
+        return OtherScreen();
         break;
       case 2:
-        return HomeScreen();
+        return OtherScreen();
         break;
       default:
         return HomeScreen();
