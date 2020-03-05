@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class LoadImage extends StatelessWidget {
   double width;
@@ -24,6 +25,42 @@ class LoadImage extends StatelessWidget {
       child: Center(
         child: CachedNetworkImage(
           imageUrl: imageUrl,
+          //image builder
+          imageBuilder: (context, imageProvider) => Container(
+            width: width,
+            height: height,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(imageBorderRadius),
+              image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
+            ),
+          ),
+
+          //placeholder
+          placeholder: (context, url) => Shimmer.fromColors(
+            baseColor: Colors.grey[200],
+            highlightColor: Colors.grey[100],
+            child: Container(
+              width: width,
+              height: height,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(borderRadius),
+              ),
+            ),
+          ),
+          //errorWidget
+          errorWidget: (context, url, error) => Shimmer.fromColors(
+            baseColor: Colors.grey[200],
+            highlightColor: Colors.grey[100],
+            child: Container(
+              width: width,
+              height: height,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(borderRadius),
+              ),
+            ),
+          ),
         ),
       ),
     );

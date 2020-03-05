@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_wallet/widgets/load_image.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -33,6 +34,14 @@ class HomeScreen extends StatelessWidget {
                     fontFamily: 'Playfair',
                     fontWeight: FontWeight.w600,
                     color: Colors.black),
+              ),
+              LoadImage(
+                "https://drive.google.com/uc?export=view&id=1bcQaCdWNUsXF2he704ZfUrofxw6KV9KH",
+                48,
+                48,
+                0,
+                8,
+                8,
               ),
             ],
           ),
