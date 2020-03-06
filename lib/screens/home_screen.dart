@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_wallet/widgets/credit_card_widget.dart';
 import 'package:my_wallet/widgets/home_top_widget.dart';
+import 'package:my_wallet/widgets/transactions_widget.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  String dropdownValue = 'Recent';
-
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         HomeTopWidget(),
         CreditCardWidget(),
+        TransactionsWidget(),
       ],
     );
   }
