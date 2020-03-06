@@ -15,6 +15,7 @@ dependencies:
   cached_network_image: ^2.0.0
   shimmer: ^1.0.1
   intl: ^0.16.1
+  local_auth: ^0.6.1
 
 dev_dependencies:
   flutter_test:
