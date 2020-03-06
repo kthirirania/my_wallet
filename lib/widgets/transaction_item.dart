@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_wallet/models/transaction.dart';
 
+import '../utils.dart';
 import 'load_image.dart';
 
 class TransactionItem extends StatelessWidget {
@@ -14,7 +15,7 @@ class TransactionItem extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 12.0),
       child: ListTile(
         title: Text(
-          transaction.name,
+          Utils.capitalizeSentence(transaction.name),
           style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
         ),
         leading: LoadImage(
@@ -25,8 +26,22 @@ class TransactionItem extends StatelessWidget {
           8,
           0,
         ),
-        subtitle: Text(
-          transaction.date,
+        subtitle: new RichText(
+          text: TextSpan(
+            style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),
+            children: <TextSpan>[
+              TextSpan(
+                text: Utils.convertDateFromString(transaction.date, "MMM dd"),
+              ),
+              TextSpan(
+                  text: ', at ',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400, color: Colors.black54)),
+              TextSpan(
+                text: Utils.convertDateFromString(transaction.date, "hh:mm a"),
+              ),
+            ],
+          ),
         ),
         trailing: Text(
           "\$" + transaction.amount.toString(),
