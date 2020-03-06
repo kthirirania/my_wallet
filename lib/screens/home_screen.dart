@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_wallet/widgets/credit_card_widget.dart';
 import 'package:my_wallet/widgets/home_top_widget.dart';
+import 'package:my_wallet/widgets/transactions_header_widget.dart';
 import 'package:my_wallet/widgets/transactions_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
         ),
         HomeTopWidget(),
         CreditCardWidget(),
+        TransactionsHeaderWidget(),
         TransactionsWidget(),
       ],
     );

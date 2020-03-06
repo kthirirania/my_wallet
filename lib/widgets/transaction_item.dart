@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:my_wallet/models/transaction.dart';
+
+import 'load_image.dart';
+
+class TransactionItem extends StatelessWidget {
+  Transaction transaction = new Transaction();
+
+  TransactionItem({this.transaction});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12.0),
+      child: ListTile(
+        title: Text(
+          transaction.name,
+          style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
+        ),
+        leading: LoadImage(
+          transaction.image,
+          60,
+          60,
+          12,
+          8,
+          0,
+        ),
+        subtitle: Text(
+          transaction.date,
+        ),
+        trailing: Text(
+          "\$" + transaction.amount.toString(),
+          style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),
+        ),
+      ),
+    );
+  }
+}
